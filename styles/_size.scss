@@ -1,0 +1,52 @@
+@import '_variables';
+
+.pic__2Xlarge {
+    @include size(1740px, 600px);
+    display: $display;
+}
+
+.pic__Xlarge {
+    @include size(1030px, 825px);
+    display: $display;
+}
+
+.pic__large {
+    @include size(650px, 490px);
+    display: $display;
+}
+
+.pic__medium {
+    @include size(670px, 300px);
+    display: $display;
+}
+
+.pic__small {
+    @include size(310px, 300px);
+    display: $display;
+}
+
+.pic__special {
+    @include size(0px, 0px);
+    display: $display;
+}
+
+
+.width__2Xlarge {
+    @include width(1740px);
+}
+
+.width__Xlarge {
+    @include width(1030px);
+}
+
+.width__large {
+    @include width(650px);
+}
+
+.width__medium {
+    @include width(670px);
+}
+
+.width__small {
+    @include width(310px);
+}

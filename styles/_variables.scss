@@ -1,0 +1,33 @@
+$display: flex;
+$box_sizing: border-box;
+$cursor: pointer;
+$font_bold: 'Futura PT Demi';
+$font_norm: 'Futura PT Book';
+$image_dir: '../assets/';
+
+@mixin width($w) {
+    width: $w;
+}
+
+@mixin size($w, $h) {
+    width: $w;
+    height: $h;
+}
+
+@mixin bradius($br) {
+    border-radius: $br;
+}
+
+@mixin padding($padver, $padhor) {
+    padding: $padver $padhor;
+}
+
+@function calculateRem($size) {
+    $remSize: $size / 16px;
+    @return $remSize * 1rem;
+}
+
+@mixin font-size($size) {
+    font-size: $size;
+    font-size: calculateRem($size);
+}

@@ -1,0 +1,30 @@
+@import '_header', '_variables', '_font', '_colors';
+
+body {
+    margin: 0 auto;
+
+    .wrapper {
+        display: $display;
+        flex-flow: column nowrap;
+        justify-content: flex-start;
+        align-items: center;
+        
+        .header {
+            display: $display;
+            justify-content: flex-start;
+            align-items: center;
+            width: 100%;
+            flex-flow: column nowrap;
+          }
+
+        .main {
+            display: $display;
+        }
+
+        .footer {
+            display: $display;
+        }
+      }
+  }
+  
+  
