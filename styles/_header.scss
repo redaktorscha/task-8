@@ -1,104 +1,55 @@
-.header__banner {
-    display: flex;
-    width: 100%;
-    height: 137px;
-    background-image: url("https://womenbz.ru/static/adv_header/promo_header/74.jpg");
-    background-repeat: no-repeat;
-    background-size: 100%;
-    background-position: center;
+@import '_variables', '_font', '_colors';
+
+.header {
+    &__banner {
+        display: $display;
+    }
+    &__nav {
+        display: $display;
+    }
 }
 
-.header__center {
-    display: flex;
-    box-sizing: border-box;
-    padding: 25px 45px;
-    align-items: center;
-    width: 100%;
-    height: 70px;
-    background-color: #222222;
+.nav-bulleted {
+    &__link {
+        display: $display;
+    }
+    &__link_active {
+        display: $display;
+    }
+}
 
-    .header__center__link {
-        display: flex;
-        align-items: center;
-        border: 1px solid white;
+.topic-navlinks {
+    &__link {
+        display: $display;
+    }
+}
 
-        .header__center__link__txt {
-            display: flex;
-            color: white;
-            text-transform: uppercase;
-            font-size: 12px;
-        }
+.nav-projects {
+    &__logo {
 
-        .header__center__link__reddot {
-            display: flex;
-            width: 6px;
-            height: 5px;
-            background-color: red;
-            border-radius: 40%;
-            margin-left: 12px;
-        }
+    }
+    &__links {
+
+    }
+    &__searchbox {
 
     }
 }
 
-.header__nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    box-sizing: border-box;
-    padding: 40px 45px;
-    width: 100%;
-    background-color: #ffffff;
-    border-bottom: 1px solid grey;
-
-    .header__nav__logo {
-        display: flex;
-        background-image: url("https://womenbz.ru/src/assets/logo-wbz.svg");
-        background-repeat: no-repeat;
-        height: 57px;
-        border: 1px solid red;
-        width: 300px;
+.project-links {
+    &__link {
 
     }
+}
 
-    .header__nav__links {
-        display: flex;
-        width: 500px;
-        justify-content: flex-start;
-        align-items: center;
-        border: 1px solid green;
-
-        .header__nav__links__link {
-            margin-left: 38px;
-        }
-
-        .header__nav__search {
-            display: $display;
-            justify-content: flex-end;
-            width: 355px;
-            height: 58px;
-
-            .input__search {
-                width: 100px;
-                transition: width 0.3s;
-
-                &:focus {
-                    width: 350px;
-                }
-            
-                ::placeholder {
-                    display: $display;
-                }
-            }
-        
-           
-        }
-    }
+.link-blue {
 
 }
 
+.search {
+    &__icon {
 
-
-
+    }
+}           
 
 

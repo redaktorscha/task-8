@@ -1,52 +1,52 @@
 @import '_variables';
 
-.pic__2Xlarge {
+.article__pic-2Xlarge {
     @include size(1740px, 600px);
     display: $display;
 }
 
-.pic__Xlarge {
+.article__pic-Xlarge {
     @include size(1030px, 825px);
     display: $display;
 }
 
-.pic__large {
+.article__pic-large {
     @include size(650px, 490px);
     display: $display;
 }
 
-.pic__medium {
+.article__pic-medium {
     @include size(670px, 300px);
     display: $display;
 }
 
-.pic__small {
+.article__pic-small {
     @include size(310px, 300px);
     display: $display;
 }
 
-.pic__special {
+.article__pic-special {
     @include size(0px, 0px);
     display: $display;
 }
 
 
-.width__2Xlarge {
+.articles__item-2Xlarge {
     @include width(1740px);
 }
 
-.width__Xlarge {
+.articles__item-Xlarge {
     @include width(1030px);
 }
 
-.width__large {
+.articles__item-large {
     @include width(650px);
 }
 
-.width__medium {
+.articles__item-medium {
     @include width(670px);
 }
 
-.width__small {
+.articles__item-small {
     @include width(310px);
 }
