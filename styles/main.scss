@@ -2,29 +2,21 @@
 
 body {
     margin: 0 auto;
+    color: $base_font;
 
     .wrapper {
         display: $display;
         flex-flow: column nowrap;
         justify-content: flex-start;
         align-items: center;
-        
-        .header {
-            display: $display;
-            justify-content: flex-start;
-            align-items: center;
-            width: 100%;
-            flex-flow: column nowrap;
-          }
+
 
         .main-content {
             display: $display;
+            flex-flow: column nowrap;
+            box-sizing: $box_sizing;
+            padding: 60px 20px 0px 90px;
         }
 
-        .footer {
-            display: $display;
-        }
-      }
-  }
-  
-  
+    }
+}

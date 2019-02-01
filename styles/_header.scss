@@ -1,24 +1,39 @@
 @import '_variables', '_font', '_colors';
 
 .header {
+    display: $display;
+    flex-flow: column nowrap;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+    box-sizing: $box_sizing;
+
     &__banner {
         display: $display;
     }
+
     &__nav {
         display: $display;
     }
 }
 
 .nav-bulleted {
+    display: $display;
+    box-sizing: $box_sizing;
+    padding: 28px 0px 30px 45px;
+
     &__link {
-        display: $display;
+        
     }
     &__link_active {
-        display: $display;
     }
 }
 
 .topic-navlinks {
+    display: $display;
+    box-sizing: $box_sizing;
+    padding: 36px 45px 40px 45px;
+
     &__link {
         display: $display;
     }
@@ -40,10 +55,6 @@
     &__link {
 
     }
-}
-
-.link-blue {
-
 }
 
 .search {
