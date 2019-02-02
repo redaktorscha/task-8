@@ -1,31 +1,61 @@
 @import '_variables', '_font', '_colors';
 
 .footer {
-    &__nav {
-        
-    }
-    &__copyright {
+    @include width();
+    display: $display;
+    flex-flow: column nowrap;
+    background-color: $d_grey;
+    color: $l_grey;
 
+    &__nav {
+        display: $display;
+        flex-flow: row nowrap;
+        justify-content: space-between;
+        box-shadow: inset 0px -1.5px 0 0 $border_color;
+        border: none;        
+    }
+
+    &__copyright {
+        @include width(820px);
+        @include padding(70px 80px);
+        display: $display;
+        flex-flow: row nowrap;
     }
 }
 
 .links-box {
+    display: $display;
+
     &__work {
-
+        display: $display;
     }
-    &__social {
 
+    &__social {
+        display: $display;
     }
 }
 
 .org {
     &__link {
+        margin-right: 35px;
 
+        &:hover {
+            cursor: $cursor;
+        }
     }
 }
 
 .social {
     &__link {
-
+        margin-right: 30px;
+        &:hover {
+            cursor: $cursor;
+        }
+    }
+    &__icon {
+        @include width(30px);
+        &:hover {
+            cursor: $cursor;
+        }
     }
 }

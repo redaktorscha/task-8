@@ -1,66 +1,137 @@
 @import '_variables', '_font', '_colors';
 
 .header {
+    @include width();
     display: $display;
     flex-flow: column nowrap;
     justify-content: flex-start;
     align-items: center;
-    width: 100%;
     box-sizing: $box_sizing;
 
     &__banner {
+        @include width();
         display: $display;
+        height: 134px;
+        background-image: url("https://womenbz.ru/static/adv_header/promo_header/74.jpg");
+        background-repeat: no-repeat;
+        background-size: 100%;
+        background-position: center;
+        cursor: $cursor;
     }
 
     &__nav {
+        @include width();
         display: $display;
     }
 }
 
 .nav-bulleted {
+    @include padding(28px 0px 30px 45px);
+    @include size(100%, 70px);
     display: $display;
+    flex-flow: row nowrap;
     box-sizing: $box_sizing;
-    padding: 28px 0px 30px 45px;
+    background-color: $d_grey;
+    list-style: none;
+    color: $white;
+    position: relative;
+    text-transform: uppercase;
+    font-size: 12px;
 
     &__link {
-        
+        margin-right: 10px;
     }
+
     &__link_active {
+        color: $red;
+
+        &::before {
+            content: "\2022";
+            display: inline-block;
+            position: absolute;
+            right: -15px;
+            top: 2px;
+        }
     }
 }
 
 .topic-navlinks {
-    display: $display;
-    box-sizing: $box_sizing;
-    padding: 36px 45px 40px 45px;
-
     &__link {
-        display: $display;
+        &:hover {
+            cursor: $cursor;
+        }
     }
 }
 
 .nav-projects {
+    @include size(100%, 134px);
+    @include padding(36px 45px 40px 45px);
+    display: $display;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+    box-sizing: $box_sizing;
+    background-color: $white;
+    border-bottom: 1px solid $border_color;
+
     &__logo {
-
+        @include width(435px);
+        display: $display;
+        background-image: url("https://womenbz.ru/src/assets/logo-wbz.svg");
+        background-size: 435px 57px;
+        background-repeat: no-repeat;
     }
+
     &__links {
-
+        @include width(266px);
+        display: $display;
+        flex-flow: row nowrap;
+        justify-content: space-between;
+        margin-left: 166px;
     }
-    &__searchbox {
 
+    &__searchbox {
+        @include width(480px);
+        display: $display;
+        justify-content: flex-end;
+        position: relative;
     }
 }
 
 .project-links {
     &__link {
-
+        margin-left: 40px;
     }
 }
 
 .search {
-    &__icon {
+    @include size(375px, 58px);
+    @include padding(20px);
+    display: $display;
+    outline: none;
+    border: 1px solid $border_color;
+    border-radius: 10px;
+    transition: width 0.3s;
 
+    &:hover {
+        cursor: text;
+        border: 1px solid $border_focused;
     }
-}           
 
+    &:focus {
+        width: 480px;
+        cursor: text;
+        border: 1px solid $border_focused;
+    }
 
+    &::placeholder {
+        display: flex;
+    }
+
+    &__icon {
+        position: absolute;
+        top: 10px;
+        right: 5px;
+        width: 14px;
+    }
+}

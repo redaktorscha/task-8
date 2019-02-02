@@ -5,7 +5,7 @@ $font_bold: 'Futura PT Demi';
 $font_norm: 'Futura PT Book';
 $image_dir: '../assets/';
 
-@mixin width($w) {
+@mixin width($w: 100%) {
     width: $w;
 }
 
@@ -18,8 +18,8 @@ $image_dir: '../assets/';
     border-radius: $br;
 }
 
-@mixin padding($padver, $padhor) {
-    padding: $padver $padhor;
+@mixin padding($pads...) {
+    padding: $pads;
 }
 
 @function calculateRem($size) {
