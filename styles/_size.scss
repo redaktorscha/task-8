@@ -1,56 +1,41 @@
 @import '_variables';
 
 .article__pic-2Xlarge {
-    @include size(1740px, 600px);
-    display: $display;
+    @include size(1160px, 400px);
 }
 
 .article__pic-Xlarge {
-    @include size(1030px, 825px);
-    display: $display;
+    @include size(684px, 550px);
 }
 
 .article__pic-large {
-    @include size(650px, 490px);
-    display: $display;
+    @include size(448px, 325px);
 }
 
 .article__pic-medium {
-    @include size(670px, 300px);
-    display: $display;
+    @include size(448px, 200px);
 }
 
 .article__pic-small {
-    @include size(310px, 300px);
-    display: $display;
+    @include size(208px, 200px);
 }
-
-.article__pic-special {
-    @include size(0px, 0px);
-    display: $display;
-}
-
 
 .articles__item-2Xlarge {
-   width: 1740px;
+   width: 1160px;
 }
 
 .articles__item-Xlarge {
-    width: 1030px;
+    width: 684px;
 }
 
 .articles__item-large {
-    width: 650px;
+    width: 448px;
 }
 
 .articles__item-medium {
-    width: 670px;
+    width: 448px;
 }
 
 .articles__item-small {
-    width: 310px;
-}
-
-.articles__item-special {
-    width: 310px;
+    width: 208px;
 }

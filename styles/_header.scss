@@ -11,10 +11,10 @@
     &__banner {
         @include width();
         display: $display;
-        height: 134px;
-        background-image: url("https://womenbz.ru/static/adv_header/promo_header/74.jpg");
+        height: 90px;
+        background-image: url("https://womenbz.ru/static/adv_header/promo_header/60.jpg");
         background-repeat: no-repeat;
-        background-size: 100%;
+        background-size: 150%;
         background-position: center;
         cursor: $cursor;
     }
@@ -22,50 +22,47 @@
     &__nav {
         @include width();
         display: $display;
+        box-sizing: $box_sizing;
+        flex-flow: column nowrap;
     }
 }
 
 .nav-bulleted {
-    @include padding(28px 0px 30px 45px);
-    @include size(100%, 70px);
+    @include padding(28px 0px 30px 30px);
+    @include size(100%, 44.5px);
     display: $display;
     flex-flow: row nowrap;
+    align-items: center;
+    justify-content: flex-start;
     box-sizing: $box_sizing;
     background-color: $d_grey;
     list-style: none;
-    color: $white;
-    position: relative;
     text-transform: uppercase;
     font-size: 12px;
 
     &__link {
         margin-right: 10px;
+        color: $white;
     }
 
     &__link_active {
-        color: $red;
+        position: relative;
 
         &::before {
             content: "\2022";
             display: inline-block;
             position: absolute;
-            right: -15px;
-            top: 2px;
-        }
-    }
-}
-
-.topic-navlinks {
-    &__link {
-        &:hover {
-            cursor: $cursor;
+            top: -5px;
+            left: 55px;
+            color: $red;
+            font-size: 20px;
         }
     }
 }
 
 .nav-projects {
-    @include size(100%, 134px);
-    @include padding(36px 45px 40px 45px);
+    @include size(100%, 90px);
+    @include padding(36px 45px 40px 30px);
     display: $display;
     flex-flow: row nowrap;
     justify-content: space-between;
@@ -75,19 +72,18 @@
     border-bottom: 1px solid $border_color;
 
     &__logo {
-        @include width(435px);
+        @include size(285px, 38px);
         display: $display;
         background-image: url("https://womenbz.ru/src/assets/logo-wbz.svg");
-        background-size: 435px 57px;
+        background-size: 100%;
         background-repeat: no-repeat;
     }
 
     &__links {
-        @include width(266px);
+        @include width(200px);
         display: $display;
         flex-flow: row nowrap;
         justify-content: space-between;
-        margin-left: 166px;
     }
 
     &__searchbox {
@@ -100,18 +96,20 @@
 
 .project-links {
     &__link {
-        margin-left: 40px;
+        color: $med_grey;
+        text-decoration: none;
     }
 }
 
 .search {
-    @include size(375px, 58px);
-    @include padding(20px);
+    @include size(250px, 40px);
+    @include padding(15px);
+    box-sizing: $box_sizing;
     display: $display;
     outline: none;
     border: 1px solid $border_color;
-    border-radius: 10px;
-    transition: width 0.3s;
+    border-radius: 20px;
+    transition: width 0.3s ease-in-out;
 
     &:hover {
         cursor: text;
@@ -119,7 +117,7 @@
     }
 
     &:focus {
-        width: 480px;
+        width: 350px;
         cursor: text;
         border: 1px solid $border_focused;
     }
@@ -131,7 +129,7 @@
     &__icon {
         position: absolute;
         top: 10px;
-        right: 5px;
+        right: 15px;
         width: 14px;
     }
 }

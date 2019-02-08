@@ -1,21 +1,23 @@
-@import '_header', '_variables', '_font', '_colors';
+@import '_header', '_font', '_colors', '_footer', '_size', '_variables', '_mix', '_articles', '_news', '_pics', '_promo';
 
 body {
     margin: 0 auto;
-    color: $font_base;
+    color: $color_base;
 
     .wrapper {
         display: $display;
         flex-flow: column nowrap;
         justify-content: flex-start;
-        align-items: center;
 
 
-        .main-content {
+        .content {
+            @include width();
+            @include padding(40px 20px 0px 60px);
             display: $display;
             flex-flow: column nowrap;
             box-sizing: $box_sizing;
-            padding: 60px 20px 0px 90px;
+            align-items: flex-start;
+            justify-content: flex-start;
         }
 
     }

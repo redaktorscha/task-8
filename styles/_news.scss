@@ -1,0 +1,29 @@
+@import '_variables', '_font', '_colors';
+.news {   
+    display: $display;
+    &__block {
+        @include padding(15px 0);
+        display: $display;
+        box-sizing: $box_sizing;       
+        flex-flow: row nowrap;
+        justify-content: space-between;        
+        align-items: flex-start;
+        border-bottom: 1px solid $border_color;        
+    }
+}                 
+
+
+.block {
+    &__txt {
+        @include width(300px);
+        display: $display;
+        flex-flow: column nowrap;
+        font-size: 16px;
+        text-align: left;
+    }
+
+    &__time {
+        display: $display;
+        font-size: 10px;
+    }
+}

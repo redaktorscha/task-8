@@ -1,0 +1,47 @@
+@import '_variables', '_font', '_colors';
+
+.pic-block {
+    display: $display;
+
+    &__img {
+        @include bradius();
+        display: $display;
+    }
+
+    &__heading {
+        display: $display;
+        flex-flow: column nowrap;
+        color: $white;
+        position: absolute;
+        bottom: 70px;
+        left: 20px;
+    }
+
+    &__txt {
+        display: $display;
+        position: absolute;
+        bottom:15px;
+        left: 20px;        
+        flex-flow: row nowrap;
+        align-items: center;
+        color: white;
+    }
+}
+
+
+
+.stat {
+    display: $display;
+    color: $icon_grey;    
+
+    &__icon {
+        @include width(12px);
+        display: $display;
+        margin-right: 10px;
+    }
+
+    &__txt {
+        display: $display;
+        font-size: 12px;
+    }
+}

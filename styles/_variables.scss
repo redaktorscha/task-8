@@ -14,7 +14,7 @@ $image_dir: '../assets/';
     height: $h;
 }
 
-@mixin bradius($br) {
+@mixin bradius($br: 6px) {
     border-radius: $br;
 }
 

@@ -1,0 +1,89 @@
+@import '_variables', '_font', '_colors';
+.articles {
+    //section wrap
+    @include width();
+    display: $display;
+    flex-flow: row wrap;
+    justify-content: flex-start;
+
+    &__item {
+        //article's wrap
+        @include bradius();
+        //@include padding(0 30px 30px 0);
+        display: $display;
+        box-sizing: $box_sizing;
+        flex-flow: column nowrap;
+        margin-right: 28px;
+        margin-bottom: 10px;  
+        background: orange;
+
+        &:hover {
+            cursor: $cursor;
+        }
+
+        &__heading {
+            //section's heading
+            @include width();
+            display: $display;
+            height: 34.6px;
+            flex-flow: row nowrap;
+            justify-content: center;
+        }
+
+        &__more {
+            //'read more' link
+            @include size(100%, 50px);
+            @include bradius();
+            display: $display;
+            justify-content: center;
+            align-items: center;
+            border: 1px solid $border_color;
+            text-align: center;
+
+            &:hover {
+                cursor: $cursor;
+            }
+        }
+    }
+}
+
+
+.article {
+    display: $display;
+
+    &:hover {
+        cursor: $cursor;
+    }
+
+    &__pic {
+        display: $display;
+        margin-bottom: 20px;
+        position: relative;
+        border: 1px solid purple;
+
+        &:hover {
+            opacity: 0.8;
+            cursor: $cursor;
+        }
+    }
+
+    &__projectname {
+        display: $display;
+        color: $project_pink;
+        text-transform: uppercase;
+    }
+
+    &__heading {
+        @include width();
+        display: $display;
+        max-height: 52px;
+        overflow: hidden;
+    }
+
+    &__lead {
+        @include width();
+        display: $display;
+        height: 30px;
+        overflow: hidden;
+    }
+}

@@ -1,0 +1,33 @@
+@import '_variables', '_font', '_colors';
+
+.promo {
+    @include padding(20px 10px);
+    display: $display;
+    box-sizing: $box_sizing;
+    background-color: $l_blue;
+    height: 325px;
+    box-shadow: inset 0px -1.5px 0 0 #ebebeb;
+
+    &__header {
+        display: $display;
+        flex-flow: column nowrap;
+        justify-content: flex-start;
+        align-items: flex-start;
+        height: 128px;
+    }
+
+    &__links {
+        @include width();
+        display: $display;
+        flex-flow: row nowrap;
+        justify-content: center;
+        align-items: flex-start;
+    }
+}
+
+.promo-link {
+    @include padding(20px 25px 20px 20px);
+    display: $display;
+    box-sizing: $box_sizing;
+    margin-top: 5px;
+}

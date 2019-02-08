@@ -1,3 +1,4 @@
+@import '_colors', '_variables';
 
 .link-white {
     &:hover {
@@ -17,4 +18,46 @@
 
 .font-bold {
     font-weight: bold;
+}
+
+.heading-Xlarge {
+    font-size: 36px;
+}
+
+.heading-medium {
+    font-size: 24px;
+}
+
+.heading-large {
+    font-size: 30px;
+}
+
+.news__block-heading {
+    text-transform: uppercase;
+    height: 32px;
+}
+
+.border {
+    box-shadow: -1.5px 0 0 0  #ebebeb;
+}
+
+.border-bottom {
+    border-bottom: 1px solid $border-color;
+}
+
+.blur {
+    mask: linear-gradient(-90deg, rgba(0, 0, 0, 0) 20%, black 80%);
+}
+
+.highlighted {
+    background-color: $articles_backgr;
+}
+
+.backgr-js {
+    @include size(448px, 325px);
+    @include bradius(8px);
+    display: $display;
+    padding-bottom: 12px;
+    margin-right: 28px; 
+    background-repeat: repeat-y;  
 }
