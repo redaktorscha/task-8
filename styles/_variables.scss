@@ -31,3 +31,37 @@ $image_dir: '../assets/';
     font-size: $size;
     font-size: calculateRem($size);
 }
+
+%icon {
+    background-size: 20px;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+%spec {
+    @include bradius(8px);
+    background-repeat: repeat-y;
+}
+
+%links {
+    &:link {
+        text-decoration: none;
+
+    }
+
+    &:hover {
+        cursor: $cursor;
+        text-decoration: none;
+
+    }
+
+    &:active {
+        text-decoration: none;
+
+    }
+
+    &:visited {
+        text-decoration: none;
+
+    }
+}

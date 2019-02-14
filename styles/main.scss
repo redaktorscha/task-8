@@ -3,6 +3,7 @@
 body {
     margin: 0 auto;
     color: $color_base;
+    font-family: $font-norm;
 
     .wrapper {
         display: $display;
@@ -12,7 +13,7 @@ body {
 
         .content {
             @include width();
-            @include padding(40px 20px 0px 60px);
+            //@include padding(40px 20px 0px 60px);
             display: $display;
             flex-flow: column nowrap;
             box-sizing: $box_sizing;

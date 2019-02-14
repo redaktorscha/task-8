@@ -11,11 +11,11 @@
 
 @font-face {
     font-family: 'Futura PT Demi';
-    src: url('FuturaPT-DemiObl.eot');
-    src: local('Futura PT Demi Oblique'), local('FuturaPT-DemiObl'),
-        url('FuturaPT-DemiObl.eot?#iefix') format('embedded-opentype'),
-        url('FuturaPT-DemiObl.woff') format('woff'),
-        url('FuturaPT-DemiObl.ttf') format('truetype');
+    src: url('../fonts/FuturaPT-Demi.eot');
+    src: local('Futura PT Demi'), local('FuturaPT-Demi'),
+        url('../fonts/FuturaPT-Demi.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/FuturaPT-Demi.woff') format('woff'),
+        url('../fonts/FuturaPT-Demi.ttf') format('truetype');
     font-weight: 600;
-    font-style: italic;
+    font-style: normal;
 }

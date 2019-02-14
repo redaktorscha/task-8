@@ -6,10 +6,10 @@
     display: $display;
     flex-flow: column nowrap;
     background-color: $color_base;
-    color: $l_grey;
+    color: $footer_grey;
 
     &__nav {
-        @include padding(40px 60px);
+        @include padding(40px 0px 40px 60px);
         display: $display;
         height: 84px;
         box-sizing: $box_sizing;
@@ -36,39 +36,78 @@
 .links-box {
     display: $display;
 
+
     &__work {
         display: $display;
+        align-items: center;
+        //border: 1px solid red;
     }
 
     &__social {
         display: $display;
+        align-items: center;
+        //border: 1px solid red;
     }
 }
 
 .org {
     &__link {
-        margin-right: 35px;
-
-        &:hover {
-            cursor: $cursor;
-        }
+        color: $footer_grey;
+        margin-right: 35px;        
+        @extend %links;       
     }
 }
 
 .social {
-    &__link {
-        margin-right: 30px;
+    &__icon {
+        display: $display;
+        @include size(20px, 20px);      
+        @extend %icon;
+        margin-right: 24px;
+      
 
         &:hover {
             cursor: $cursor;
         }
     }
 
-    &__icon {
-        @include width(30px);
+    &__icon-yt {
+        background-image: url($image_dir + 'youtube_gr.png');
 
         &:hover {
-            cursor: $cursor;
+            background-image: url($image_dir + 'youtube_w.png');
+        }
+    }
+
+    &__icon-tel {
+        background-image: url($image_dir + 'telegram_gr.png');
+
+        &:hover {
+            background-image: url($image_dir + 'telegram_w.png');
+        }
+    }
+
+    &__icon-inst {
+        background-image: url($image_dir + 'instagram_gr.png');
+
+        &:hover {
+            background-image: url($image_dir + 'instagram_w.png');
+        }
+    }
+
+    &__icon-face {
+        background-image: url($image_dir + 'facebook_gr.png');
+
+        &:hover {
+            background-image: url($image_dir + 'facebook_w.png');
+        }
+    }
+
+    &__icon-vk {
+        background-image: url($image_dir + 'vk_gr.png');
+
+        &:hover {
+            background-image: url($image_dir + 'vk_w.png');
         }
     }
 }
