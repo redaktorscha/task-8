@@ -7,17 +7,17 @@
   border-radius: 8px;
   background-repeat: repeat-y; }
 
-.newslink:link, .org__link:link {
+.link__active:link, .org__link:link, .article__link:link, .newslink:link {
   text-decoration: none; }
 
-.newslink:hover, .org__link:hover {
+.link__active:hover, .org__link:hover, .article__link:hover, .newslink:hover {
   cursor: pointer;
   text-decoration: none; }
 
-.newslink:active, .org__link:active {
+.link__active:active, .org__link:active, .article__link:active, .newslink:active {
   text-decoration: none; }
 
-.newslink:visited, .org__link:visited {
+.link__active:visited, .org__link:visited, .article__link:visited, .newslink:visited {
   text-decoration: none; }
 
 @font-face {
@@ -70,21 +70,22 @@
   top: -12px; }
   .nav-bulleted__link {
     margin-right: 10px;
-    color: #ffffff;
     font-size: 10.5px;
     letter-spacing: 0.1rem;
-    text-decoration: none; }
-  .nav-bulleted__link_active {
+    text-decoration: none;
     position: relative;
     left: -10px; }
-    .nav-bulleted__link_active::before {
-      content: "\2022";
-      display: inline-block;
-      position: absolute;
-      top: -7px;
-      left: 48px;
-      color: #ff231e;
-      font-size: 20px; }
+
+.link__active {
+  color: #ffffff; }
+  .link__active::before {
+    content: "\2022";
+    display: inline-block;
+    position: absolute;
+    top: -7px;
+    left: 48px;
+    color: #ff231e;
+    font-size: 20px; }
 
 .nav-projects {
   width: 100%;
@@ -139,9 +140,9 @@
     display: flex; }
   .search__icon {
     position: absolute;
-    top: 10px;
+    top: 12px;
     right: 15px;
-    width: 14px; }
+    width: 16px; }
 
 @font-face {
   font-family: 'Futura PT Book';
@@ -166,17 +167,17 @@
   border-radius: 8px;
   background-repeat: repeat-y; }
 
-.newslink:link, .org__link:link {
+.link__active:link, .org__link:link, .article__link:link, .newslink:link {
   text-decoration: none; }
 
-.newslink:hover, .org__link:hover {
+.link__active:hover, .org__link:hover, .article__link:hover, .newslink:hover {
   cursor: pointer;
   text-decoration: none; }
 
-.newslink:active, .org__link:active {
+.link__active:active, .org__link:active, .article__link:active, .newslink:active {
   text-decoration: none; }
 
-.newslink:visited, .org__link:visited {
+.link__active:visited, .org__link:visited, .article__link:visited, .newslink:visited {
   text-decoration: none; }
 
 @font-face {
@@ -202,17 +203,17 @@
   border-radius: 8px;
   background-repeat: repeat-y; }
 
-.newslink:link, .org__link:link {
+.link__active:link, .org__link:link, .article__link:link, .newslink:link {
   text-decoration: none; }
 
-.newslink:hover, .org__link:hover {
+.link__active:hover, .org__link:hover, .article__link:hover, .newslink:hover {
   cursor: pointer;
   text-decoration: none; }
 
-.newslink:active, .org__link:active {
+.link__active:active, .org__link:active, .article__link:active, .newslink:active {
   text-decoration: none; }
 
-.newslink:visited, .org__link:visited {
+.link__active:visited, .org__link:visited, .article__link:visited, .newslink:visited {
   text-decoration: none; }
 
 .link-white:hover {
@@ -285,10 +286,6 @@
         opacity: 0.9;
         //border: 1px solid red;
     }*/ }
-
-.newslink {
-  color: #333333;
-  font-family: "Futura PT Demi"; }
 
 .footer {
   width: 100%;
@@ -373,17 +370,17 @@
   border-radius: 8px;
   background-repeat: repeat-y; }
 
-.newslink:link, .org__link:link {
+.link__active:link, .org__link:link, .article__link:link, .newslink:link {
   text-decoration: none; }
 
-.newslink:hover, .org__link:hover {
+.link__active:hover, .org__link:hover, .article__link:hover, .newslink:hover {
   cursor: pointer;
   text-decoration: none; }
 
-.newslink:active, .org__link:active {
+.link__active:active, .org__link:active, .article__link:active, .newslink:active {
   text-decoration: none; }
 
-.newslink:visited, .org__link:visited {
+.link__active:visited, .org__link:visited, .article__link:visited, .newslink:visited {
   text-decoration: none; }
 
 .article__pic-2Xlarge {
@@ -433,17 +430,17 @@
   border-radius: 8px;
   background-repeat: repeat-y; }
 
-.newslink:link, .org__link:link {
+.link__active:link, .org__link:link, .article__link:link, .newslink:link {
   text-decoration: none; }
 
-.newslink:hover, .org__link:hover {
+.link__active:hover, .org__link:hover, .article__link:hover, .newslink:hover {
   cursor: pointer;
   text-decoration: none; }
 
-.newslink:active, .org__link:active {
+.link__active:active, .org__link:active, .article__link:active, .newslink:active {
   text-decoration: none; }
 
-.newslink:visited, .org__link:visited {
+.link__active:visited, .org__link:visited, .article__link:visited, .newslink:visited {
   text-decoration: none; }
 
 .social__icon {
@@ -455,17 +452,17 @@
   border-radius: 8px;
   background-repeat: repeat-y; }
 
-.newslink:link, .org__link:link {
+.link__active:link, .org__link:link, .article__link:link, .newslink:link {
   text-decoration: none; }
 
-.newslink:hover, .org__link:hover {
+.link__active:hover, .org__link:hover, .article__link:hover, .newslink:hover {
   cursor: pointer;
   text-decoration: none; }
 
-.newslink:active, .org__link:active {
+.link__active:active, .org__link:active, .article__link:active, .newslink:active {
   text-decoration: none; }
 
-.newslink:visited, .org__link:visited {
+.link__active:visited, .org__link:visited, .article__link:visited, .newslink:visited {
   text-decoration: none; }
 
 .link-white:hover {
@@ -539,10 +536,6 @@
         //border: 1px solid red;
     }*/ }
 
-.newslink {
-  color: #333333;
-  font-family: "Futura PT Demi"; }
-
 .social__icon {
   background-size: 20px;
   background-repeat: no-repeat;
@@ -552,17 +545,17 @@
   border-radius: 8px;
   background-repeat: repeat-y; }
 
-.newslink:link, .org__link:link {
+.link__active:link, .org__link:link, .article__link:link, .newslink:link {
   text-decoration: none; }
 
-.newslink:hover, .org__link:hover {
+.link__active:hover, .org__link:hover, .article__link:hover, .newslink:hover {
   cursor: pointer;
   text-decoration: none; }
 
-.newslink:active, .org__link:active {
+.link__active:active, .org__link:active, .article__link:active, .newslink:active {
   text-decoration: none; }
 
-.newslink:visited, .org__link:visited {
+.link__active:visited, .org__link:visited, .article__link:visited, .newslink:visited {
   text-decoration: none; }
 
 @font-face {
@@ -641,20 +634,20 @@
     }*/ }
   .article__link {
     color: #333333; }
-    .article__link:link {
-      text-decoration: none; }
-    .article__link:hover {
-      cursor: pointer;
-      text-decoration: none; }
-    .article__link:active {
-      text-decoration: none; }
-    .article__link:visited {
-      text-decoration: none; }
   .article__pic {
     display: flex;
     margin-bottom: 20px;
     position: relative; }
     .article__pic::before {
+      border-radius: 0 0 6px 6px;
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      height: 30%;
+      width: 100%;
+      content: "";
+      background: linear-gradient(to bottom, transparent 10%, rgba(22, 22, 22, 0.637)); }
+    .article__pic::after {
       content: "";
       background-color: rgba(255, 255, 255, 0.1);
       top: 0;
@@ -663,7 +656,7 @@
       right: 0;
       position: absolute;
       opacity: 0; }
-    .article__pic:hover::before {
+    .article__pic:hover::after {
       opacity: 1;
       transition: opacity 0.3s ease; }
     .article__pic-special01 {
@@ -681,10 +674,9 @@
     letter-spacing: 0.12rem; }
   .article__heading {
     width: 100%;
+    display: inline-block;
     font-family: "Futura PT Demi";
     font-size: 20px;
-    max-height: 52px;
-    overflow: hidden;
     position: relative;
     top: -15px; }
   .article__lead {
@@ -702,17 +694,17 @@
   border-radius: 8px;
   background-repeat: repeat-y; }
 
-.newslink:link, .org__link:link {
+.link__active:link, .org__link:link, .article__link:link, .newslink:link {
   text-decoration: none; }
 
-.newslink:hover, .org__link:hover {
+.link__active:hover, .org__link:hover, .article__link:hover, .newslink:hover {
   cursor: pointer;
   text-decoration: none; }
 
-.newslink:active, .org__link:active {
+.link__active:active, .org__link:active, .article__link:active, .newslink:active {
   text-decoration: none; }
 
-.newslink:visited, .org__link:visited {
+.link__active:visited, .org__link:visited, .article__link:visited, .newslink:visited {
   text-decoration: none; }
 
 @font-face {
@@ -772,17 +764,17 @@
   border-radius: 8px;
   background-repeat: repeat-y; }
 
-.newslink:link, .org__link:link {
+.link__active:link, .org__link:link, .article__link:link, .newslink:link {
   text-decoration: none; }
 
-.newslink:hover, .org__link:hover {
+.link__active:hover, .org__link:hover, .article__link:hover, .newslink:hover {
   cursor: pointer;
   text-decoration: none; }
 
-.newslink:active, .org__link:active {
+.link__active:active, .org__link:active, .article__link:active, .newslink:active {
   text-decoration: none; }
 
-.newslink:visited, .org__link:visited {
+.link__active:visited, .org__link:visited, .article__link:visited, .newslink:visited {
   text-decoration: none; }
 
 @font-face {
@@ -857,17 +849,17 @@
   border-radius: 8px;
   background-repeat: repeat-y; }
 
-.newslink:link, .org__link:link {
+.link__active:link, .org__link:link, .article__link:link, .newslink:link {
   text-decoration: none; }
 
-.newslink:hover, .org__link:hover {
+.link__active:hover, .org__link:hover, .article__link:hover, .newslink:hover {
   cursor: pointer;
   text-decoration: none; }
 
-.newslink:active, .org__link:active {
+.link__active:active, .org__link:active, .article__link:active, .newslink:active {
   text-decoration: none; }
 
-.newslink:visited, .org__link:visited {
+.link__active:visited, .org__link:visited, .article__link:visited, .newslink:visited {
   text-decoration: none; }
 
 @font-face {
@@ -925,7 +917,8 @@ body {
   body .wrapper {
     display: flex;
     flex-flow: column nowrap;
-    justify-content: flex-start; }
+    justify-content: flex-start;
+    align-items: center; }
     body .wrapper .content {
       width: 100%;
       display: flex;

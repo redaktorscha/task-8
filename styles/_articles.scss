@@ -1,7 +1,7 @@
 @import '_variables', '_font', '_colors';
 
 .articles {
-    //wrap
+    //section's wrap
     @include width();
     display: $display;
     flex-flow: row wrap;
@@ -55,33 +55,15 @@
 
 
 .article {
+    //wrap for each article
     display: $display;
-   
+
+
 
     &__link {
         //display: flex;
+        @extend %links;
         color: $color_base;
-
-        &:link {
-            text-decoration: none;
-
-        }
-
-        &:hover {
-            cursor: $cursor;
-            text-decoration: none;
-
-        }
-
-        &:active {
-            text-decoration: none;
-
-        }
-
-        &:visited {
-            text-decoration: none;
-
-        }
     }
 
     &__pic {
@@ -91,6 +73,19 @@
         //border: 1px solid purple;
 
         &::before {
+            @include bradius(0 0 6px 6px);
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            height: 30%;
+            width: 100%;
+            //border: 1px solid rebeccapurple;
+            content: "";
+            background: linear-gradient(to bottom, transparent 10%, rgba(22, 22, 22, 0.637)) // background: rgba(0,0,0,0.15);
+                //filter: blur(10px);
+        }
+
+        &::after {
             content: "";
             background-color: rgba(255, 255, 255, 0.1);
             top: 0;
@@ -104,7 +99,7 @@
         }
 
 
-        &:hover::before {
+        &:hover::after {
             //filter:drop-shadow(0px 0px 100px grey);
             //filter:  brightness(120%) saturate(80%);
             opacity: 1;
@@ -144,12 +139,12 @@
 
     &__heading {
         @include width();
-        //display: $display;
+        display: inline-block;
         font-family: $font-bold;
         font-size: 20px;
-        max-height: 52px;
+        //max-height: 52px;
         //border: 1px solid green;
-        overflow: hidden;
+        //overflow: hidden;
         position: relative;
         top: -15px;
     }
@@ -170,6 +165,8 @@
 
     &__lead {
         @include width();
+        //font-size: 15px;
+        //font-weight: normal;
         //display: $display;
         //height: 30px;
         overflow: hidden;

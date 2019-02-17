@@ -97,12 +97,3 @@
         //border: 1px solid red;
     }*/
 }
-
-.newslink {
-    @extend %links;
-    color: $color_base;
-    //letter-spacing: 0.5px;
-    font-family: $font-bold;
-
-   
-}
