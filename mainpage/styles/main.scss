@@ -5,11 +5,14 @@ body {
     color: $color_base;
     font-family: $font-norm;
 
+
     .wrapper {
+        @include width();
         display: $display;
         flex-flow: column nowrap;
         justify-content: flex-start;
         align-items: center;
         background-color: $white;
+        //overflow-x: hidden; 
     }
 }

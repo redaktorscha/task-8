@@ -1,21 +1,23 @@
 @import '_variables', '_font', '_colors';
 
 .header {
-    //@include width();
+    @include width();
+    //overflow: hidden;
     display: $display;
     flex-flow: column nowrap;
-    //justify-content: flex-start;
-    //align-items: center;
+    justify-content: center;
+    align-items: stretch;
+    align-content: center;
     //box-sizing: $box_sizing;
     font-family: $font-norm;
 
     &__banner {
-        @include width();
+        @include size(1900px, 90px);
+        align-self: center;
         display: $display;
-        height: 90px;
         background-image: url($banners +'60.jpg');
         background-repeat: no-repeat;
-        background-size: 152%;
+        background-size: 101%;
         background-position: center;
         cursor: $cursor;
         //overflow: hidden;
@@ -24,10 +26,11 @@
     }
 
     &__nav {
-        //@include width();
+        @include width();
         display: $display;
         //box-sizing: $box_sizing;
         flex-flow: column nowrap;
+        //justify-content: space-between;
         //align-items: flex-start;
         //border: 1px solid green;
     }
@@ -39,79 +42,88 @@
     display: $display;
     flex-flow: row nowrap;
     align-items: center;
-    justify-content: flex-start;
+    justify-content: center;
     //box-sizing: $box_sizing;
     background-color: $d_grey;
-    list-style: none;
-    text-transform: uppercase;
-    font-size: 12px;
-    position: relative;
-    top: -12px;
+    //position: relative;
+    //top: -12px;
+
 
     // z-index: 1;
+    &__links {
+        @include width(1400px);
+        display: $display;
+        list-style: none;
+        text-transform: uppercase;
+        font-size: 12px;
+        //border: 1px solid white;
+    }
+}
 
-
+.bulleted-links {
     &__link {
         margin-right: 10px;
-        font-size: 10.5px;
-        letter-spacing: 0.1rem;
+        font-size: 10px;
+        letter-spacing: 0.12rem;
         text-decoration: none;
         position: relative;
         left: -10px;
+    }
+}
+
+.navlink-active {
+    color: $white;
+    @extend %links;
+
+    &::before {
+        content: "\2022";
+        display: inline-block;
+        position: absolute;
+        top: -6px;
+        left: 46px;
+        color: $red;
+        font-size: 20px;
         // border: 1px solid white;
-    }
 
+    }
 
 }
 
-.link {
-    &__active {
-        color: $white;
-        @extend %links;
-
-        &::before {
-            content: "\2022";
-            display: inline-block;
-            position: absolute;
-            top: -7px;
-            left: 48px;
-            color: $red;
-            font-size: 20px;
-            // border: 1px solid white;
-
-        }
-    }
+.nav-wrap {
+    width: 100%;
+    display: $display;
+    justify-content: center;
 }
-
 
 .nav-projects {
-    @include width(1900px);
-    @include padding(0 30px 28px 30px);
+    @include size(1400px, 90px);
+    //max-width: 1900px;
+    @include padding(20px 0px);
+    box-sizing: $box_sizing;   
     display: $display;
-    flex-flow: row nowrap;
+    align-self: center;
+    //align-content: center;
+    flex-flow: row wrap;
     justify-content: space-between;
     align-items: center;
-    box-sizing: $box_sizing;
     background-color: $white;
     border-bottom: 1px solid $border_color;
+    //position: absolute;
     //border: 1px solid red;
 
-    &__logo {
-        @include size(285px, 38px);
-        //border: 1px solid black;
-        display: $display;
-        background-image: url($banners +'logo-wbz.svg');
-        background-size: 100%;
-        background-repeat: no-repeat;
-    }
-
     &__links {
-        @include width(200px);
-        //border: 1px solid black;
+        @include width(575px);        
         display: $display;
         flex-flow: row nowrap;
-        justify-content: space-between;
+        justify-content: flex-start;
+        align-items: center;
+        position: relative;
+        left: 30px;
+        //border: 1px solid blue;
     }
+
+
+
 
     &__searchbox {
         @include width(480px);
@@ -121,18 +133,47 @@
     }
 }
 
+.projects {
+    &__logo {
+        @include size(285px, 38px);
+        //border: 1px solid black;
+        display: $display;
+        background-image: url($banners +'logo-wbz.svg');
+        background-size: 100%;
+        background-repeat: no-repeat;
+        margin-right: 112px;
+    }
+
+    &__links {
+        @include width(170px);
+        //border: 1px solid black;
+        display: $display;
+        flex-flow: row nowrap;
+        justify-content: space-between;
+    }
+
+
+}
+
+/*
 .project-links {
+    @include width(200px);
+    //border: 1px solid black;
+    display: $display;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+
     &__link {
         color: $med_grey;
         text-decoration: none;
     }
-}
+}*/
 
 .search {
     @include size(250px, 40px);
-    @include padding(15px);
+    @include padding(0 20px);
     box-sizing: $box_sizing;
-    display: $display;
+    display: $display;  
     outline: none;
     border: 1px solid $border_color;
     border-radius: 20px;
@@ -151,6 +192,8 @@
 
     &::placeholder {
         display: flex;
+        font-size: 14px;
+        letter-spacing: 0.5px;        
     }
 
     &__icon {
@@ -159,4 +202,9 @@
         right: 15px;
         width: 16px;
     }
+}
+
+.project-link {
+    @extend %links;
+    color: $color_base;
 }

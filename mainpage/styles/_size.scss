@@ -1,22 +1,22 @@
 @import '_variables';
 
-.article__pic-2Xlarge {
+.article__pic_2Xlarge {
     @include size(1160px, 400px);
 }
 
-.article__pic-Xlarge {
+.article__pic_Xlarge {
     @include size(684px, 550px);
 }
 
-.article__pic-large {
+.article__pic_large {
     @include size(448px, 325px);
 }
 
-.article__pic-medium {
+.article__pic_medium {
     @include size(448px, 200px);
 }
 
-.article__pic-small {
+.article__pic_small {
     @include size(208px, 200px);
 }
 

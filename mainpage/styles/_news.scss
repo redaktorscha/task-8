@@ -14,6 +14,8 @@
         //border: 1px solid red;       
     }
     &__block-heading {
+        @extend %links;
+        color: $color_base;
         box-sizing: $box_sizing;   
         @include padding(10px 0);
         text-transform: uppercase;

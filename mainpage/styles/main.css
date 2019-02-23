@@ -1,4 +1,29 @@
 @charset "UTF-8";
+.social__icon {
+  background-size: 20px;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.article__pic-special03, .article__pic-special02, .article__pic-special01 {
+  border-radius: 8px;
+  background-repeat: repeat-y;
+}
+
+.newslink:link, .articles__link:link, .org__link:link, .link__active:link {
+  text-decoration: none;
+}
+.newslink:hover, .articles__link:hover, .org__link:hover, .link__active:hover {
+  cursor: pointer;
+  text-decoration: none;
+}
+.newslink:active, .articles__link:active, .org__link:active, .link__active:active {
+  text-decoration: none;
+}
+.newslink:visited, .articles__link:visited, .org__link:visited, .link__active:visited {
+  text-decoration: none;
+}
+
 @font-face {
   font-family: "Futura PT Book";
   src: url("../fonts/FuturaPT-Book.eot");
@@ -8,70 +33,70 @@
 }
 @font-face {
   font-family: "Futura PT Demi";
-  src: url("FuturaPT-DemiObl.eot");
-  src: local("Futura PT Demi Oblique"), local("FuturaPT-DemiObl"), url("FuturaPT-DemiObl.eot?#iefix") format("embedded-opentype"), url("FuturaPT-DemiObl.woff") format("woff"), url("FuturaPT-DemiObl.ttf") format("truetype");
+  src: url("../fonts/FuturaPT-Demi.eot");
+  src: local("Futura PT Demi"), local("FuturaPT-Demi"), url("../fonts/FuturaPT-Demi.eot?#iefix") format("embedded-opentype"), url("../fonts/FuturaPT-Demi.woff") format("woff"), url("../fonts/FuturaPT-Demi.ttf") format("truetype");
   font-weight: 600;
-  font-style: italic;
+  font-style: normal;
 }
 .header {
-  width: 100%;
   display: flex;
   flex-flow: column nowrap;
-  justify-content: flex-start;
-  align-items: center;
-  box-sizing: border-box;
+  font-family: "Futura PT Book";
 }
 .header__banner {
   width: 100%;
   display: flex;
-  height: 134px;
-  background-image: url("https://womenbz.ru/static/adv_header/promo_header/74.jpg");
+  height: 90px;
+  background-image: url("../assets/banners/60.jpg");
   background-repeat: no-repeat;
-  background-size: 100%;
+  background-size: 152%;
   background-position: center;
   cursor: pointer;
 }
 .header__nav {
-  width: 100%;
   display: flex;
+  flex-flow: column nowrap;
 }
 
 .nav-bulleted {
-  padding: 28px 0px 30px 45px;
   width: 100%;
-  height: 70px;
+  height: 44px;
   display: flex;
   flex-flow: row nowrap;
-  box-sizing: border-box;
+  align-items: center;
+  justify-content: flex-start;
   background-color: #222222;
   list-style: none;
-  color: #ffffff;
-  position: relative;
   text-transform: uppercase;
   font-size: 12px;
+  position: relative;
+  top: -12px;
 }
 .nav-bulleted__link {
   margin-right: 10px;
+  font-size: 10.5px;
+  letter-spacing: 0.1rem;
+  text-decoration: none;
+  position: relative;
+  left: -10px;
 }
-.nav-bulleted__link_active {
-  color: #ff231e;
+
+.link__active {
+  color: #ffffff;
 }
-.nav-bulleted__link_active::before {
+.link__active::before {
   content: "•";
   display: inline-block;
   position: absolute;
-  right: -15px;
-  top: 2px;
-}
-
-.topic-navlinks__link:hover {
-  cursor: pointer;
+  top: -7px;
+  left: 48px;
+  color: #ff231e;
+  font-size: 20px;
 }
 
 .nav-projects {
-  width: 100%;
-  height: 134px;
-  padding: 36px 45px 40px 45px;
+  width: 1900px;
+  padding: 0 30px 28px 30px;
   display: flex;
   flex-flow: row nowrap;
   justify-content: space-between;
@@ -81,18 +106,18 @@
   border-bottom: 1px solid #ebebeb;
 }
 .nav-projects__logo {
-  width: 435px;
+  width: 285px;
+  height: 38px;
   display: flex;
-  background-image: url("https://womenbz.ru/src/assets/logo-wbz.svg");
-  background-size: 435px 57px;
+  background-image: url("../assets/banners/logo-wbz.svg");
+  background-size: 100%;
   background-repeat: no-repeat;
 }
 .nav-projects__links {
-  width: 266px;
+  width: 200px;
   display: flex;
   flex-flow: row nowrap;
   justify-content: space-between;
-  margin-left: 166px;
 }
 .nav-projects__searchbox {
   width: 480px;
@@ -102,25 +127,27 @@
 }
 
 .project-links__link {
-  margin-left: 40px;
+  color: #4c4c4c;
+  text-decoration: none;
 }
 
 .search {
-  width: 375px;
-  height: 58px;
-  padding: 20px;
+  width: 250px;
+  height: 40px;
+  padding: 15px;
+  box-sizing: border-box;
   display: flex;
   outline: none;
   border: 1px solid #ebebeb;
-  border-radius: 10px;
-  transition: width 0.3s;
+  border-radius: 20px;
+  transition: width 0.3s ease-in-out;
 }
 .search:hover {
   cursor: text;
   border: 1px solid #cecece;
 }
 .search:focus {
-  width: 480px;
+  width: 350px;
   cursor: text;
   border: 1px solid #cecece;
 }
@@ -129,9 +156,84 @@
 }
 .search__icon {
   position: absolute;
-  top: 10px;
-  right: 5px;
-  width: 14px;
+  top: 12px;
+  right: 15px;
+  width: 16px;
+}
+
+.social__icon {
+  background-size: 20px;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.article__pic-special03, .article__pic-special02, .article__pic-special01 {
+  border-radius: 8px;
+  background-repeat: repeat-y;
+}
+
+.newslink:link, .articles__link:link, .org__link:link, .link__active:link {
+  text-decoration: none;
+}
+.newslink:hover, .articles__link:hover, .org__link:hover, .link__active:hover {
+  cursor: pointer;
+  text-decoration: none;
+}
+.newslink:active, .articles__link:active, .org__link:active, .link__active:active {
+  text-decoration: none;
+}
+.newslink:visited, .articles__link:visited, .org__link:visited, .link__active:visited {
+  text-decoration: none;
+}
+
+.content {
+  width: 100%;
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+}
+.content__section {
+  padding: 30px 0px;
+  width: 100%;
+  display: flex;
+  box-sizing: border-box;
+  flex-flow: column nowrap;
+  align-items: center;
+  border-bottom: 1px solid #ebebeb;
+}
+.content__section-highlighted {
+  background-color: #f9f9f9;
+}
+
+.section__heading {
+  width: 100%;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  font-family: "Futura PT Demi";
+}
+.section__heading:hover {
+  cursor: text;
+}
+.section__articles {
+  width: 1166px;
+  padding: 20px;
+  box-sizing: border-box;
+  display: flex;
+  flex-flow: row wrap;
+}
+.section__more {
+  width: 1166px;
+  border-radius: 6px;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  border: 1px solid #dedede;
+  background-color: #ffffff;
+}
+.section__more:hover {
+  cursor: pointer;
+  background-color: #ecf2f7;
 }
 
 @font-face {
@@ -143,11 +245,36 @@
 }
 @font-face {
   font-family: "Futura PT Demi";
-  src: url("FuturaPT-DemiObl.eot");
-  src: local("Futura PT Demi Oblique"), local("FuturaPT-DemiObl"), url("FuturaPT-DemiObl.eot?#iefix") format("embedded-opentype"), url("FuturaPT-DemiObl.woff") format("woff"), url("FuturaPT-DemiObl.ttf") format("truetype");
+  src: url("../fonts/FuturaPT-Demi.eot");
+  src: local("Futura PT Demi"), local("FuturaPT-Demi"), url("../fonts/FuturaPT-Demi.eot?#iefix") format("embedded-opentype"), url("../fonts/FuturaPT-Demi.woff") format("woff"), url("../fonts/FuturaPT-Demi.ttf") format("truetype");
   font-weight: 600;
-  font-style: italic;
+  font-style: normal;
 }
+.social__icon {
+  background-size: 20px;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.article__pic-special03, .article__pic-special02, .article__pic-special01 {
+  border-radius: 8px;
+  background-repeat: repeat-y;
+}
+
+.newslink:link, .articles__link:link, .org__link:link, .link__active:link {
+  text-decoration: none;
+}
+.newslink:hover, .articles__link:hover, .org__link:hover, .link__active:hover {
+  cursor: pointer;
+  text-decoration: none;
+}
+.newslink:active, .articles__link:active, .org__link:active, .link__active:active {
+  text-decoration: none;
+}
+.newslink:visited, .articles__link:visited, .org__link:visited, .link__active:visited {
+  text-decoration: none;
+}
+
 @font-face {
   font-family: "Futura PT Book";
   src: url("../fonts/FuturaPT-Book.eot");
@@ -157,30 +284,143 @@
 }
 @font-face {
   font-family: "Futura PT Demi";
-  src: url("FuturaPT-DemiObl.eot");
-  src: local("Futura PT Demi Oblique"), local("FuturaPT-DemiObl"), url("FuturaPT-DemiObl.eot?#iefix") format("embedded-opentype"), url("FuturaPT-DemiObl.woff") format("woff"), url("FuturaPT-DemiObl.ttf") format("truetype");
+  src: url("../fonts/FuturaPT-Demi.eot");
+  src: local("Futura PT Demi"), local("FuturaPT-Demi"), url("../fonts/FuturaPT-Demi.eot?#iefix") format("embedded-opentype"), url("../fonts/FuturaPT-Demi.woff") format("woff"), url("../fonts/FuturaPT-Demi.ttf") format("truetype");
   font-weight: 600;
-  font-style: italic;
+  font-style: normal;
 }
+.social__icon {
+  background-size: 20px;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.article__pic-special03, .article__pic-special02, .article__pic-special01 {
+  border-radius: 8px;
+  background-repeat: repeat-y;
+}
+
+.newslink:link, .articles__link:link, .org__link:link, .link__active:link {
+  text-decoration: none;
+}
+.newslink:hover, .articles__link:hover, .org__link:hover, .link__active:hover {
+  cursor: pointer;
+  text-decoration: none;
+}
+.newslink:active, .articles__link:active, .org__link:active, .link__active:active {
+  text-decoration: none;
+}
+.newslink:visited, .articles__link:visited, .org__link:visited, .link__active:visited {
+  text-decoration: none;
+}
+
+.link-white:hover {
+  color: #ffffff;
+}
+
+.link-blue:hover {
+  color: #007dd2;
+}
+
+.font-base {
+  font-size: 15px;
+  font-weight: normal;
+}
+
+.font-bold {
+  font-weight: bold;
+}
+
+.heading-Xlarge {
+  font-size: 46px;
+}
+
+.heading-medium {
+  font-size: 20px;
+}
+
+.heading-large {
+  font-size: 30px;
+}
+
+.heading-small {
+  font-size: 20px;
+  font-weight: normal;
+}
+
+.heading-promo {
+  margin-bottom: 0px;
+  font-family: "Futura PT Demi";
+}
+
+.border {
+  box-shadow: -1.5px 0 0 0 #ebebeb;
+}
+
+.border-top {
+  border-top: 1px solid #ebebeb;
+}
+
+/*
+
+.backgr-js {
+    @include size(448px, 325px);
+    @include bradius(8px);
+    display: $display;
+    padding-bottom: 12px;
+    margin-right: 28px;
+    background-repeat: repeat-y;
+}*/
+.blur-js {
+  display: inline-block;
+}
+
+.cut {
+  mask: linear-gradient(-90deg, rgba(0, 0, 0, 0) 10%, black 90%);
+  -webkit-mask: linear-gradient(-90deg, rgba(0, 0, 0, 0) 10%, black 90%);
+  /*
+      &::after {
+          content: '';
+          position: absolute;
+          top: 5px;
+          left: 0px;
+          width: 50px;
+          height: 30px;
+          background: linear-gradient(to right, transparent 0%, white 50%, white 100%);
+          opacity: 0.9;
+          //border: 1px solid red;
+      }*/
+}
+
 .footer {
   width: 100%;
+  box-sizing: border-box;
   display: flex;
   flex-flow: column nowrap;
-  background-color: #222222;
-  color: #c2b69c;
+  background-color: #333333;
+  color: #999999;
 }
 .footer__nav {
+  padding: 40px 0px 40px 60px;
   display: flex;
+  height: 84px;
+  box-sizing: border-box;
   flex-flow: row nowrap;
   justify-content: space-between;
-  box-shadow: inset 0px -1.5px 0 0 #ebebeb;
+  align-items: center;
+  box-shadow: inset 0px -1.5px 0 0 #4c4c4c;
   border: none;
 }
 .footer__copyright {
   width: 820px;
-  padding: 70px 80px;
+  padding: 70px 60px;
+  box-sizing: border-box;
   display: flex;
   flex-flow: row nowrap;
+  height: 174px;
+  align-items: center;
+  justify-content: flex-start;
+  line-height: 1.5;
 }
 
 .links-box {
@@ -188,106 +428,711 @@
 }
 .links-box__work {
   display: flex;
+  align-items: center;
 }
 .links-box__social {
   display: flex;
+  align-items: center;
 }
 
 .org__link {
+  color: #999999;
   margin-right: 35px;
 }
-.org__link:hover {
-  cursor: pointer;
-}
 
-.social__link {
-  margin-right: 30px;
-}
-.social__link:hover {
-  cursor: pointer;
-}
 .social__icon {
-  width: 30px;
+  display: flex;
+  width: 20px;
+  height: 20px;
+  margin-right: 24px;
 }
 .social__icon:hover {
   cursor: pointer;
 }
+.social__icon-yt {
+  background-image: url("../assets/icons/youtube_gr.png");
+}
+.social__icon-yt:hover {
+  background-image: url("../assets/icons/youtube_w.png");
+}
+.social__icon-tel {
+  background-image: url("../assets/icons/telegram_gr.png");
+}
+.social__icon-tel:hover {
+  background-image: url("../assets/icons/telegram_w.png");
+}
+.social__icon-inst {
+  background-image: url("../assets/icons/instagram_gr.png");
+}
+.social__icon-inst:hover {
+  background-image: url("../assets/icons/instagram_w.png");
+}
+.social__icon-face {
+  background-image: url("../assets/icons/facebook_gr.png");
+}
+.social__icon-face:hover {
+  background-image: url("../assets/icons/facebook_w.png");
+}
+.social__icon-vk {
+  background-image: url("../assets/icons/vk_gr.png");
+}
+.social__icon-vk:hover {
+  background-image: url("../assets/icons/vk_w.png");
+}
+
+.social__icon {
+  background-size: 20px;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.article__pic-special03, .article__pic-special02, .article__pic-special01 {
+  border-radius: 8px;
+  background-repeat: repeat-y;
+}
+
+.newslink:link, .articles__link:link, .link__active:link, .org__link:link {
+  text-decoration: none;
+}
+.newslink:hover, .articles__link:hover, .link__active:hover, .org__link:hover {
+  cursor: pointer;
+  text-decoration: none;
+}
+.newslink:active, .articles__link:active, .link__active:active, .org__link:active {
+  text-decoration: none;
+}
+.newslink:visited, .articles__link:visited, .link__active:visited, .org__link:visited {
+  text-decoration: none;
+}
 
 .article__pic-2Xlarge {
-  width: 1740px;
-  height: 600px;
-  display: flex;
+  width: 1160px;
+  height: 400px;
 }
 
 .article__pic-Xlarge {
-  width: 1030px;
-  height: 825px;
-  display: flex;
+  width: 684px;
+  height: 550px;
 }
 
 .article__pic-large {
-  width: 650px;
-  height: 490px;
-  display: flex;
+  width: 448px;
+  height: 325px;
 }
 
 .article__pic-medium {
-  width: 670px;
-  height: 300px;
-  display: flex;
+  width: 448px;
+  height: 200px;
 }
 
 .article__pic-small {
-  width: 310px;
-  height: 300px;
+  width: 208px;
+  height: 200px;
+}
+
+.article-2Xlarge {
+  width: 1160px;
+}
+
+.article-promo {
+  width: 752px;
+}
+
+.article-Xlarge {
+  width: 684px;
+}
+
+.article-large {
+  width: 448px;
+}
+
+.article-medium {
+  width: 448px;
+}
+
+.article-small {
+  width: 208px;
+}
+
+.social__icon {
+  background-size: 20px;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.article__pic-special03, .article__pic-special02, .article__pic-special01 {
+  border-radius: 8px;
+  background-repeat: repeat-y;
+}
+
+.newslink:link, .articles__link:link, .link__active:link, .org__link:link {
+  text-decoration: none;
+}
+.newslink:hover, .articles__link:hover, .link__active:hover, .org__link:hover {
+  cursor: pointer;
+  text-decoration: none;
+}
+.newslink:active, .articles__link:active, .link__active:active, .org__link:active {
+  text-decoration: none;
+}
+.newslink:visited, .articles__link:visited, .link__active:visited, .org__link:visited {
+  text-decoration: none;
+}
+
+.social__icon {
+  background-size: 20px;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.article__pic-special03, .article__pic-special02, .article__pic-special01 {
+  border-radius: 8px;
+  background-repeat: repeat-y;
+}
+
+.newslink:link, .articles__link:link, .link__active:link, .org__link:link {
+  text-decoration: none;
+}
+.newslink:hover, .articles__link:hover, .link__active:hover, .org__link:hover {
+  cursor: pointer;
+  text-decoration: none;
+}
+.newslink:active, .articles__link:active, .link__active:active, .org__link:active {
+  text-decoration: none;
+}
+.newslink:visited, .articles__link:visited, .link__active:visited, .org__link:visited {
+  text-decoration: none;
+}
+
+.link-white:hover {
+  color: #ffffff;
+}
+
+.link-blue:hover {
+  color: #007dd2;
+}
+
+.font-base {
+  font-size: 15px;
+  font-weight: normal;
+}
+
+.font-bold {
+  font-weight: bold;
+}
+
+.heading-Xlarge {
+  font-size: 46px;
+}
+
+.heading-medium {
+  font-size: 20px;
+}
+
+.heading-large {
+  font-size: 30px;
+}
+
+.heading-small {
+  font-size: 20px;
+  font-weight: normal;
+}
+
+.heading-promo {
+  margin-bottom: 0px;
+  font-family: "Futura PT Demi";
+}
+
+.border {
+  box-shadow: -1.5px 0 0 0 #ebebeb;
+}
+
+.border-top {
+  border-top: 1px solid #ebebeb;
+}
+
+/*
+
+.backgr-js {
+    @include size(448px, 325px);
+    @include bradius(8px);
+    display: $display;
+    padding-bottom: 12px;
+    margin-right: 28px;
+    background-repeat: repeat-y;
+}*/
+.blur-js {
+  display: inline-block;
+}
+
+.cut {
+  mask: linear-gradient(-90deg, rgba(0, 0, 0, 0) 10%, black 90%);
+  -webkit-mask: linear-gradient(-90deg, rgba(0, 0, 0, 0) 10%, black 90%);
+  /*
+      &::after {
+          content: '';
+          position: absolute;
+          top: 5px;
+          left: 0px;
+          width: 50px;
+          height: 30px;
+          background: linear-gradient(to right, transparent 0%, white 50%, white 100%);
+          opacity: 0.9;
+          //border: 1px solid red;
+      }*/
+}
+
+.social__icon {
+  background-size: 20px;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.article__pic-special03, .article__pic-special02, .article__pic-special01 {
+  border-radius: 8px;
+  background-repeat: repeat-y;
+}
+
+.newslink:link, .articles__link:link, .link__active:link, .org__link:link {
+  text-decoration: none;
+}
+.newslink:hover, .articles__link:hover, .link__active:hover, .org__link:hover {
+  cursor: pointer;
+  text-decoration: none;
+}
+.newslink:active, .articles__link:active, .link__active:active, .org__link:active {
+  text-decoration: none;
+}
+.newslink:visited, .articles__link:visited, .link__active:visited, .org__link:visited {
+  text-decoration: none;
+}
+
+@font-face {
+  font-family: "Futura PT Book";
+  src: url("../fonts/FuturaPT-Book.eot");
+  src: local("Futura PT Book"), local("FuturaPT-Book"), url("../fonts/FuturaPT-Book.eot?#iefix") format("embedded-opentype"), url("../fonts/FuturaPT-Book.woff") format("woff"), url("../fonts/FuturaPT-Book.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Futura PT Demi";
+  src: url("../fonts/FuturaPT-Demi.eot");
+  src: local("Futura PT Demi"), local("FuturaPT-Demi"), url("../fonts/FuturaPT-Demi.eot?#iefix") format("embedded-opentype"), url("../fonts/FuturaPT-Demi.woff") format("woff"), url("../fonts/FuturaPT-Demi.ttf") format("truetype");
+  font-weight: 600;
+  font-style: normal;
+}
+/*.articles {
+   
+    @include width();
+    display: $display;
+    flex-flow: row wrap;
+    justify-content: flex-start;
+    box-sizing: $box_sizing;
+    @include padding(35px 0px 60px 60px);
+
+
+    &__heading {
+        //section's heading
+        @include width();
+        display: $display;
+        //height: 34.6px;
+        flex-flow: row nowrap;
+        justify-content: center;
+        font-family: $font-bold;
+    }
+
+    &__more {
+        //'read more' link
+        @include size(1160px, 50px);
+        @include bradius();
+        display: $display;
+        justify-content: center;
+        align-items: center;
+        border: 1px solid $more_border;
+        text-align: center;
+        background-color: $white;
+
+        &:hover {
+            cursor: $cursor;
+            background-color: $more_blue;
+        }
+    }
+
+    &__item {
+        //article's wrap
+        @include bradius();
+        //@include padding(0 30px 30px 0);
+        display: $display;
+        //box-sizing: $box_sizing;
+        flex-flow: column nowrap;
+        justify-content: flex-start;
+        margin-right: 28px;
+        margin-bottom: 28px; 
+        //background: orange; 
+        //border: 1px solid red;      
+
+    }
+}
+*/
+.articles__link {
+  color: #333333;
+}
+
+.article {
+  border-radius: 6px;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: flex-start;
+  margin-right: 28px;
+  margin-bottom: 28px;
+  /*&__heading-blurred {
+      &::after {
+          content: '';
+          position: absolute;
+          //display: inline-block;
+          background: linear-gradient(to right, transparent 0%, white 50%, white 100%);
+          width: 30px;
+          height: 16px;
+          bottom: 2px;
+          right: 30px;
+          border: 1px solid orange;
+      }
+  }*/
+  /*&__lead-blurred {
+      &::after {
+          content: '';
+          position: absolute;
+          display: flex;
+          background: linear-gradient(to right, transparent 0%, white 50%, white 100%);
+          width: 30px;
+          height: 11px;
+          top: 5px;
+          right: 40px;
+      }
+  }*/
+}
+.article__pic {
+  display: flex;
+  margin-bottom: 20px;
+  position: relative;
+}
+.article__pic::before {
+  border-radius: 0 0 6px 6px;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 30%;
+  width: 100%;
+  content: "";
+  background: linear-gradient(to bottom, transparent 10%, rgba(22, 22, 22, 0.637));
+}
+.article__pic::after {
+  content: "";
+  background-color: rgba(255, 255, 255, 0.1);
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  position: absolute;
+  opacity: 0;
+}
+.article__pic:hover::after {
+  opacity: 1;
+  transition: opacity 0.3s ease;
+}
+.article__pic-special01 {
+  background-image: url("../assets/imgs_L/64.jpg");
+}
+.article__pic-special02 {
+  background-image: url("../assets/imgs_L/kak-proizvodit-dzhelato.png");
+}
+.article__pic-special03 {
+  background-image: url("../assets/imgs_L/mne-ochen-hotelos-takzhe.png");
+}
+.article__projectname {
+  display: flex;
+  color: #f77f84;
+  font-family: "Futura PT Demi";
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.12rem;
+}
+.article__heading {
+  width: 100%;
+  display: inline-block;
+  font-family: "Futura PT Demi";
+  font-size: 20px;
+  position: relative;
+  top: -15px;
+}
+.article__lead {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+  top: -30px;
+}
+
+.social__icon {
+  background-size: 20px;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.article__pic-special01, .article__pic-special02, .article__pic-special03 {
+  border-radius: 8px;
+  background-repeat: repeat-y;
+}
+
+.newslink:link, .link__active:link, .org__link:link, .articles__link:link {
+  text-decoration: none;
+}
+.newslink:hover, .link__active:hover, .org__link:hover, .articles__link:hover {
+  cursor: pointer;
+  text-decoration: none;
+}
+.newslink:active, .link__active:active, .org__link:active, .articles__link:active {
+  text-decoration: none;
+}
+.newslink:visited, .link__active:visited, .org__link:visited, .articles__link:visited {
+  text-decoration: none;
+}
+
+@font-face {
+  font-family: "Futura PT Book";
+  src: url("../fonts/FuturaPT-Book.eot");
+  src: local("Futura PT Book"), local("FuturaPT-Book"), url("../fonts/FuturaPT-Book.eot?#iefix") format("embedded-opentype"), url("../fonts/FuturaPT-Book.woff") format("woff"), url("../fonts/FuturaPT-Book.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Futura PT Demi";
+  src: url("../fonts/FuturaPT-Demi.eot");
+  src: local("Futura PT Demi"), local("FuturaPT-Demi"), url("../fonts/FuturaPT-Demi.eot?#iefix") format("embedded-opentype"), url("../fonts/FuturaPT-Demi.woff") format("woff"), url("../fonts/FuturaPT-Demi.ttf") format("truetype");
+  font-weight: 600;
+  font-style: normal;
+}
+.news {
   display: flex;
 }
-
-.article__pic-special {
-  width: 0px;
-  height: 0px;
+.news__block {
+  padding: 15px 0;
   display: flex;
+  box-sizing: border-box;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: flex-start;
+  border-bottom: 1px solid #ebebeb;
+}
+.news__block-heading {
+  box-sizing: border-box;
+  padding: 10px 0;
+  text-transform: uppercase;
+  font-family: "Futura PT Demi";
+  letter-spacing: 0.1rem;
 }
 
-.articles__item-2Xlarge {
-  width: 1740px;
+.block__txt {
+  width: 300px;
+  display: flex;
+  flex-flow: column nowrap;
+  font-size: 16px;
+  text-align: left;
+}
+.block__time {
+  display: flex;
+  box-sizing: border-box;
+  font-size: 10px;
+  color: #99a5c2;
 }
 
-.articles__item-Xlarge {
-  width: 1030px;
+.newslink {
+  color: #333333;
+  font-family: "Futura PT Demi";
 }
 
-.articles__item-large {
-  width: 650px;
+.social__icon {
+  background-size: 20px;
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
-.articles__item-medium {
-  width: 670px;
+.article__pic-special01, .article__pic-special02, .article__pic-special03 {
+  border-radius: 8px;
+  background-repeat: repeat-y;
 }
 
-.articles__item-small {
-  width: 310px;
+.link__active:link, .org__link:link, .articles__link:link, .newslink:link {
+  text-decoration: none;
+}
+.link__active:hover, .org__link:hover, .articles__link:hover, .newslink:hover {
+  cursor: pointer;
+  text-decoration: none;
+}
+.link__active:active, .org__link:active, .articles__link:active, .newslink:active {
+  text-decoration: none;
+}
+.link__active:visited, .org__link:visited, .articles__link:visited, .newslink:visited {
+  text-decoration: none;
 }
 
-.articles__item-special {
-  width: 310px;
+@font-face {
+  font-family: "Futura PT Book";
+  src: url("../fonts/FuturaPT-Book.eot");
+  src: local("Futura PT Book"), local("FuturaPT-Book"), url("../fonts/FuturaPT-Book.eot?#iefix") format("embedded-opentype"), url("../fonts/FuturaPT-Book.woff") format("woff"), url("../fonts/FuturaPT-Book.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Futura PT Demi";
+  src: url("../fonts/FuturaPT-Demi.eot");
+  src: local("Futura PT Demi"), local("FuturaPT-Demi"), url("../fonts/FuturaPT-Demi.eot?#iefix") format("embedded-opentype"), url("../fonts/FuturaPT-Demi.woff") format("woff"), url("../fonts/FuturaPT-Demi.ttf") format("truetype");
+  font-weight: 600;
+  font-style: normal;
+}
+.pic-block {
+  display: flex;
+  font-family: "Futura PT Demi";
+}
+.pic-block__img {
+  width: 100%;
+  border-radius: 6px;
+  display: flex;
+  /*&::after {
+      content: '';
+      position: absolute;
+      bottom: 0px;
+      left: 0px;
+      //width: 99%;
+      //height: 30%;
+      border: 1px solid orange;
+      //background: rgba(0, 0, 0, 0.15);
+      //filter: blur(10px);
+  }*/
+}
+.pic-block__heading {
+  display: flex;
+  flex-flow: column nowrap;
+  color: #ffffff;
+  position: absolute;
+  bottom: 70px;
+  left: 20px;
+  font-family: "Futura PT Book";
+  line-height: 1.1;
+}
+.pic-block__txt {
+  display: flex;
+  position: absolute;
+  bottom: 15px;
+  left: 20px;
+  flex-flow: row nowrap;
+  align-items: center;
+  color: white;
+  font-weight: bold;
+}
+
+.stat {
+  display: flex;
+  color: #e5dfd4;
+}
+.stat__icon {
+  width: 12px;
+  display: flex;
+  margin-right: 5px;
+}
+.stat__txt {
+  display: flex;
+  font-size: 12px;
+  margin-right: 10px;
+}
+
+.social__icon {
+  background-size: 20px;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.article__pic-special01, .article__pic-special02, .article__pic-special03 {
+  border-radius: 8px;
+  background-repeat: repeat-y;
+}
+
+.link__active:link, .org__link:link, .articles__link:link, .newslink:link {
+  text-decoration: none;
+}
+.link__active:hover, .org__link:hover, .articles__link:hover, .newslink:hover {
+  cursor: pointer;
+  text-decoration: none;
+}
+.link__active:active, .org__link:active, .articles__link:active, .newslink:active {
+  text-decoration: none;
+}
+.link__active:visited, .org__link:visited, .articles__link:visited, .newslink:visited {
+  text-decoration: none;
+}
+
+@font-face {
+  font-family: "Futura PT Book";
+  src: url("../fonts/FuturaPT-Book.eot");
+  src: local("Futura PT Book"), local("FuturaPT-Book"), url("../fonts/FuturaPT-Book.eot?#iefix") format("embedded-opentype"), url("../fonts/FuturaPT-Book.woff") format("woff"), url("../fonts/FuturaPT-Book.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Futura PT Demi";
+  src: url("../fonts/FuturaPT-Demi.eot");
+  src: local("Futura PT Demi"), local("FuturaPT-Demi"), url("../fonts/FuturaPT-Demi.eot?#iefix") format("embedded-opentype"), url("../fonts/FuturaPT-Demi.woff") format("woff"), url("../fonts/FuturaPT-Demi.ttf") format("truetype");
+  font-weight: 600;
+  font-style: normal;
+}
+.promo {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: flex-start;
+  align-items: flex-start;
+  box-sizing: border-box;
+  background-color: #eef7ff;
+  box-shadow: inset 0px -1.5px 0 0 #ebebeb;
+}
+.promo__header {
+  width: 103%;
+  height: 250px;
+  padding: 30px 0 0px 30px;
+  display: flex;
+  box-sizing: border-box;
+  flex-flow: column nowrap;
+}
+.promo__links {
+  width: 100%;
+  padding: 5px 5px 5px 5px;
+  display: flex;
+  box-sizing: border-box;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.promo-link {
+  padding: 20px 25px 20px 20px;
+  display: flex;
+  box-sizing: border-box;
+  margin-top: 5px;
+  text-decoration: none;
+  color: #333333;
+  font-size: 16px;
+  letter-spacing: 0.05rem;
 }
 
 body {
   margin: 0 auto;
   color: #333333;
+  font-family: "Futura PT Book";
 }
 body .wrapper {
   display: flex;
   flex-flow: column nowrap;
   justify-content: flex-start;
   align-items: center;
-}
-body .wrapper .main-content {
-  display: flex;
-  flex-flow: column nowrap;
-  box-sizing: border-box;
-  padding: 60px 20px 0px 90px;
+  background-color: #ffffff;
 }
 
 /*# sourceMappingURL=main.css.map */

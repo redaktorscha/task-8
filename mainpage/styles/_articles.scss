@@ -63,14 +63,13 @@
 
 .article {
     //each article's wrap
-    @include bradius();
-    //@include padding(0 30px 30px 0);
+    @include bradius();   
     display: $display;
-    //box-sizing: $box_sizing;
+    box-sizing: $box_sizing;
     flex-flow: column nowrap;
     justify-content: flex-start;
     margin-right: 28px;
-    margin-bottom: 28px;
+    //margin-bottom: 28px;
     //background: orange; 
     //border: 1px solid red;     
 
@@ -122,17 +121,17 @@
         // cursor: $cursor;
         // }
 
-        &-special01 {
+        &_special01 {
             @extend %spec;
             background-image: url($imgs_L + '64.jpg');
         }
 
-        &-special02 {
+        &_special02 {
             @extend %spec;
             background-image: url($imgs_L + 'kak-proizvodit-dzhelato.png');
         }
 
-        &-special03 {
+        &_special03 {
             @extend %spec;
             background-image: url($imgs_L + 'mne-ochen-hotelos-takzhe.png');
         }

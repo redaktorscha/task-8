@@ -20,7 +20,7 @@
     }
 
     &__links {
-        @include width();
+        //@include width();
         //height: 128px;
         @include padding (5px 5px 5px 5px);
         display: $display;
@@ -40,6 +40,6 @@
     margin-top: 5px;
     text-decoration: none;
     color: $color_base;
-    font-size: 16px;
+    font-size: 14px;
     letter-spacing: 0.05rem;    
 }

@@ -10,7 +10,7 @@
     //justify-content: flex-start;
 
     &__section {
-        @include padding(30px 0px);
+        @include padding(40px 20px 40px 40px);
         @include width();
         display: $display;
         box-sizing: $box_sizing;
@@ -18,7 +18,7 @@
         align-items: center;
         border-bottom: 1px solid $border-color;
 
-        &-highlighted {
+        &_highlighted {
             background-color: $articles_backgr;
         }
     }
@@ -38,20 +38,23 @@
     }
 
     &__articles {
-        //row of articles
-        @include width(1166px);
-        @include padding(20px);
+        //row of articles       
+        @include width(1300px);
+        max-width: 1400px;
+        @include padding(0 30px 0 60px);
         box-sizing: $box_sizing;
-        display: $display;
+        display: $display;       
         flex-flow: row wrap;
+        //border: 1px solid orange;
     }
 
     &__more {
-        @include width(1166px);
+        @include size(1160px, 50px);
         @include bradius();
         display: $display;
         flex-flow: row nowrap;
         justify-content: center;
+        align-items: center;
         border: 1px solid $more_border;
         background-color: $white;
 

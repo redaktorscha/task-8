@@ -5,24 +5,27 @@
     box-sizing: $box_sizing;
     display: $display;
     flex-flow: column nowrap;
+    align-items: stretch;
     background-color: $color_base;
     color: $footer_grey;
 
     &__nav {
-        @include padding(40px 0px 40px 60px);
+        @include width();
+        @include padding(40px 0);
         display: $display;
         height: 84px;
         box-sizing: $box_sizing;
         flex-flow: row nowrap;
-        justify-content: space-between;
+        justify-content: center;
         align-items: center;
         box-shadow: inset 0px -1.5px 0 0 $med_grey;
-        border: none;
+        //border: 1px solid red;;
     }
 
     &__copyright {
-        @include width(820px);
-        @include padding(70px 60px);
+        @include width(1300px);
+        @include padding(70px 30px);
+        align-self: center;
         box-sizing: $box_sizing;
         display: $display;
         flex-flow: row nowrap;
@@ -30,11 +33,21 @@
         align-items: center;
         justify-content: flex-start;
         line-height: 1.5;
+        //border: 1px solid red;
     }
 }
 
 .links-box {
     display: $display;
+    @include width(1300px);
+    @include padding(0 30px);
+    box-sizing: $box_sizing;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+    //border: 1px solid red;
+
+
 
 
     &__work {
@@ -53,25 +66,29 @@
 .org {
     &__link {
         color: $footer_grey;
-        margin-right: 35px;        
-        @extend %links;       
+        margin-right: 35px;
+        @extend %links;
     }
 }
 
 .social {
     &__icon {
         display: $display;
-        @include size(20px, 20px);      
+        @include size(20px, 20px);
         @extend %icon;
         margin-right: 24px;
-      
+
 
         &:hover {
             cursor: $cursor;
         }
-    }
 
-    &__icon-yt {
+        &:active {
+            cursor: $cursor;
+        }
+
+        
+    &_yt {
         background-image: url($icons + 'youtube_gr.png');
 
         &:hover {
@@ -79,7 +96,7 @@
         }
     }
 
-    &__icon-tel {
+    &_tel {
         background-image: url($icons + 'telegram_gr.png');
 
         &:hover {
@@ -87,7 +104,7 @@
         }
     }
 
-    &__icon-inst {
+    &_inst {
         background-image: url($icons + 'instagram_gr.png');
 
         &:hover {
@@ -95,7 +112,7 @@
         }
     }
 
-    &__icon-face {
+    &_face {
         background-image: url($icons + 'facebook_gr.png');
 
         &:hover {
@@ -103,11 +120,13 @@
         }
     }
 
-    &__icon-vk {
+    &_vk {
         background-image: url($icons + 'vk_gr.png');
 
         &:hover {
             background-image: url($icons + 'vk_w.png');
         }
     }
+    }
+
 }
