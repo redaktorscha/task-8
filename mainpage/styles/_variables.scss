@@ -1,0 +1,73 @@
+$display: flex;
+$box_sizing: border-box;
+$cursor: pointer;
+$font_bold: 'Futura PT Demi';
+$font_norm: 'Futura PT Book';
+$icons: '../assets/icons/';
+$banners: '../assets/banners/';
+$imgs_S: '../assets/imgs_S/';
+$imgs_M: '../assets/imgs_M/';
+$imgs_L: '../assets/imgs_L/';
+$imgs_XL: '../assets/imgs_XL/';
+$imgs_2XL: '../assets/imgs_2XL/';
+
+@mixin width($w: 100%) {
+    width: $w;
+}
+
+@mixin size($w, $h) {
+    width: $w;
+    height: $h;
+}
+
+@mixin bradius($br: 6px) {
+    border-radius: $br;
+}
+
+@mixin padding($pads...) {
+    padding: $pads;
+}
+
+@function calculateRem($size) {
+    $remSize: $size / 16px;
+    @return $remSize * 1rem;
+}
+
+@mixin font-size($size) {
+    font-size: $size;
+    font-size: calculateRem($size);
+}
+
+%icon {
+    background-size: 20px;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+%spec {
+    @include bradius(8px);
+    background-repeat: repeat-y;
+}
+
+%links {
+    &:link {
+        text-decoration: none;
+
+    }
+
+    &:hover {
+        cursor: $cursor;
+        text-decoration: none;
+
+    }
+
+    &:active {
+        text-decoration: none;
+
+    }
+
+    &:visited {
+        text-decoration: none;
+
+    }
+}

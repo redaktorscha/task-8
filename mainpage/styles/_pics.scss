@@ -1,0 +1,72 @@
+@import '_variables', '_font', '_colors';
+
+.pic-block {
+    display: $display;
+    font-family: $font-bold;
+
+
+    &__img {
+        @include width();
+        @include bradius();
+        display: $display;
+        //position: relative;
+
+
+        /*&::after {
+            content: '';
+            position: absolute;
+            bottom: 0px;
+            left: 0px;
+            //width: 99%;
+            //height: 30%;
+            border: 1px solid orange;
+            //background: rgba(0, 0, 0, 0.15);
+            //filter: blur(10px);
+        }*/
+    }
+
+    &__heading {
+        display: $display;
+        flex-flow: column nowrap;
+        color: $white;
+        position: absolute;
+        bottom: 70px;
+        left: 20px;
+        font-family: $font-norm;
+        line-height: 1.1;
+    }
+
+
+    &__txt {
+        display: $display;
+        position: absolute;
+        bottom: 15px;
+        left: 20px;
+        flex-flow: row nowrap;
+        align-items: center;
+        color: white;
+        //font-family: $font-bold;
+        font-weight: bold;
+        //background: linear-gradient(transparent, black);
+        //mix-blend-mode: multiply;
+    }
+}
+
+
+
+.stat {
+    display: $display;
+    color: $icon_grey;
+
+    &__icon {
+        @include width(12px);
+        display: $display;
+        margin-right: 5px;
+    }
+
+    &__txt {
+        display: $display;
+        font-size: 12px;
+        margin-right: 10px;
+    }
+}

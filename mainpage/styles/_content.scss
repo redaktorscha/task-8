@@ -1,0 +1,63 @@
+@import '_variables', '_colors';
+
+.content {
+    @include width();
+    //@include padding(40px 20px 0px 60px);
+    display: $display;
+    flex-flow: column nowrap;
+    //box-sizing: $box_sizing;
+    align-items: center;
+    //justify-content: flex-start;
+
+    &__section {
+        @include padding(30px 0px);
+        @include width();
+        display: $display;
+        box-sizing: $box_sizing;
+        flex-flow: column nowrap;
+        align-items: center;
+        border-bottom: 1px solid $border-color;
+
+        &-highlighted {
+            background-color: $articles_backgr;
+        }
+    }
+}
+
+.section {
+    &__heading {
+        @include width();
+        display: $display;
+        flex-flow: row nowrap;
+        justify-content: center;
+        font-family: $font-bold;
+
+        &:hover {
+            cursor: text;
+        }
+    }
+
+    &__articles {
+        //row of articles
+        @include width(1166px);
+        @include padding(20px);
+        box-sizing: $box_sizing;
+        display: $display;
+        flex-flow: row wrap;
+    }
+
+    &__more {
+        @include width(1166px);
+        @include bradius();
+        display: $display;
+        flex-flow: row nowrap;
+        justify-content: center;
+        border: 1px solid $more_border;
+        background-color: $white;
+
+        &:hover {
+            cursor: $cursor;
+            background-color: $more_blue;
+        }
+    }
+}

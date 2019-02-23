@@ -1,0 +1,45 @@
+@import '_variables';
+
+.article__pic-2Xlarge {
+    @include size(1160px, 400px);
+}
+
+.article__pic-Xlarge {
+    @include size(684px, 550px);
+}
+
+.article__pic-large {
+    @include size(448px, 325px);
+}
+
+.article__pic-medium {
+    @include size(448px, 200px);
+}
+
+.article__pic-small {
+    @include size(208px, 200px);
+}
+
+.article-2Xlarge {
+   width: 1160px;
+}
+
+.article-promo {
+    width: 752px;
+}
+
+.article-Xlarge {
+    width: 684px;
+}
+
+.article-large {
+    width: 448px;
+}
+
+.article-medium {
+    width: 448px;
+}
+
+.article-small {
+    width: 208px;
+}
