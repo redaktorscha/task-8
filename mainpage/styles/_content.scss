@@ -1,13 +1,10 @@
 @import '_variables', '_colors';
 
 .content {
-    @include width();
-    //@include padding(40px 20px 0px 60px);
+    @include width();   
     display: $display;
     flex-flow: column nowrap;
-    //box-sizing: $box_sizing;
     align-items: center;
-    //justify-content: flex-start;
 
     &__section {
         @include padding(40px 20px 40px 40px);
@@ -38,14 +35,13 @@
     }
 
     &__articles {
-        //row of articles       
-        @include width(1300px);
-        max-width: 1400px;
+        //row of articles      
+        
+        max-width: 1300px;
         @include padding(0 30px 0 60px);
         box-sizing: $box_sizing;
         display: $display;       
         flex-flow: row wrap;
-        //border: 1px solid orange;
     }
 
     &__more {

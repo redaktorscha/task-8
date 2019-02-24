@@ -1,8 +1,7 @@
 @import '_variables', '_font', '_colors';
 .news {   
     display: $display;
-    //box-sizing: $box_sizing; 
-    //border: 1px solid green;
+
     &__block {
         @include padding(15px 0);
         display: $display;
@@ -10,16 +9,14 @@
         flex-flow: row nowrap;
         justify-content: space-between;        
         align-items: flex-start;
-        border-bottom: 1px solid $border_color; 
-        //border: 1px solid red;       
+        border-bottom: 1px solid $border_color;             
     }
     &__block-heading {
         @extend %links;
         color: $color_base;
         box-sizing: $box_sizing;   
         @include padding(10px 0);
-        text-transform: uppercase;
-        //font-weight: bold;    
+        text-transform: uppercase;        
         font-family: $font-bold;
         letter-spacing: 0.1rem;
     }
@@ -27,8 +24,7 @@
 
 
 .block {
-    &__txt {
-       
+    &__txt {       
         @include width(300px);
         display: $display;
         flex-flow: column nowrap;
@@ -36,8 +32,7 @@
         text-align: left;
     }
 
-    &__time {
-        
+    &__time {        
         display: $display;
         box-sizing: $box_sizing;    
         font-size: 10px;
@@ -50,7 +45,6 @@
 
 .newslink {
     @extend %links;
-    color: $color_base;
-    //letter-spacing: 0.5px;
+    color: $color_base;    
     font-family: $font-bold;   
 }

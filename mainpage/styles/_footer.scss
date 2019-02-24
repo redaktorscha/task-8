@@ -19,7 +19,7 @@
         justify-content: center;
         align-items: center;
         box-shadow: inset 0px -1.5px 0 0 $med_grey;
-        //border: 1px solid red;;
+      
     }
 
     &__copyright {
@@ -33,7 +33,7 @@
         align-items: center;
         justify-content: flex-start;
         line-height: 1.5;
-        //border: 1px solid red;
+       
     }
 }
 
@@ -45,7 +45,7 @@
     flex-flow: row nowrap;
     justify-content: space-between;
     align-items: center;
-    //border: 1px solid red;
+   
 
 
 
@@ -53,13 +53,13 @@
     &__work {
         display: $display;
         align-items: center;
-        //border: 1px solid red;
+       
     }
 
     &__social {
         display: $display;
         align-items: center;
-        //border: 1px solid red;
+       
     }
 }
 
